@@ -1,0 +1,99 @@
+/* Base Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    border-radius: 0;
+}
+
+/* Mobile Menu Background Color */
+.navbar-collapse {
+    background-color: #e0e0e0; /* Light gray for mobile dropdown */
+}
+
+/* Mobile Menu Links */
+.navbar-nav > li > a {
+    color: black;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+/* Page Heading */
+h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Section Boxes */
+.section-box {
+    position: relative;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 200px; /* Ensure sections have a minimum height */
+    margin-bottom: 20px; /* Ensure spacing between sections */
+}
+
+/* Section Titles */
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    color: black;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    border-bottom-left-radius: 5px;
+}
+
+/* Specific Section Colors */
+.chicken-title {
+    background-color: #d59898; /* Orange */
+}
+
+.beef-title {
+    background-color: #c14543;; /* Red */
+}
+
+.sushi-title {
+    background-color: #e5d198; /* Blue */
+}
+
+/* Ensure text inside sections doesn't overlap with titles */
+.section-box p {
+    margin-top: 40px; /* Push text down to avoid overlapping with the title */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: #e0e0e0;
+    }
+
+    .navbar-nav > li > a {
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .navbar-nav > li:last-child > a {
+        border-bottom: none;
+    }
+
+    /* Make sure sections in mobile view are stacked properly */
+    .section-box {
+        min-height: 150px; /* Ensure there's enough space for each section */
+    }
+}
+
+/* Ensure proper spacing in tablet view */
+@media (max-width: 991px) and (min-width: 768px) {
+    .section-box {
+        min-height: 250px; /* Increase the height for tablet view */
+    }
+}
